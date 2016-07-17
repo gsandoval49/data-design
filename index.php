@@ -38,6 +38,8 @@
 						<li>“I want to click on one of the words that gives me all the multiple meanings of that word in the Greek.” </li>
 						<li>“I want to be able to read multiple English versions parallel to each other when I’m studying.”</li>
 					</ul>
+				<h2>Conceptual Model</h2>
+				
 
 			</main>
 		</body>
