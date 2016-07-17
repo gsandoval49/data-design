@@ -38,8 +38,19 @@
 						<li>“I want to click on one of the words that gives me all the multiple meanings of that word in the Greek.” </li>
 						<li>“I want to be able to read multiple English versions parallel to each other when I’m studying.”</li>
 					</ul>
-				<h2>Conceptual Model</h2>
-				
+
+				<!-- User flow content -->
+				<h2>User Flow</h2>
+					<ul>
+						<li>0)	The user doesn’t have to sign in to look up words</li>
+						<li>1)	User types in keyword or verse “money” into field</li>
+						<li>2)	User has a list of verses with the word money to choose from</li>
+						<li>3)	User clicks on the verse</li>
+						<li>4)	User clicks to expand the tools to see each word’s individual Greek word</li>
+						<li>5)	User selects the word money with the Greek word right next to it. </li>
+						<li>6)	User sees a list of definitions or multiple meanings of the word “money” in the Greek language.</li>
+					</ul>
+
 
 			</main>
 		</body>
