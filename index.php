@@ -62,7 +62,7 @@
 
 				<!-- Logical model aka entity relationship model -->
 				<h2>Entity Relationship Model</h2>
-				<img src="images/entity-relationship-diagram.png" alt="Entity Relationship Diagram Image">
+				<img src="images/data-design-erd.svg" alt="Entity Relationship Diagram Image">
 				
 
 			</main>
