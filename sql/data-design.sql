@@ -26,3 +26,9 @@ CREATE TABLE profile (
 	PRIMARY KEY (profileId)
 );
 
+-- create table for verse entity
+CREATE TABLE verse (
+	-- this is another primary key in the verse entity table
+	verseId INT UNSIGNED AUTO_INCREMENT NOT NULL,
+
+)
