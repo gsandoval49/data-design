@@ -43,5 +43,18 @@ CREATE TABLE verse (
 
 -- create verseFavorite weak entity (a m-to-n for profile and an m-to-m relationship with verse entity)
 CREATE TABLE verseFavorite (
+	-- these aren't auto increment because they're foreign keys
+	-- ...UNSURE if i need to auto increment...
+	verseFavoriteProfileId INT UNSIGNED NOT NULL,
+	verseFavoriteVerseId INT UNSIGNED NOT NULL,
+	verseFavoriteDate DATETIME NOT NULL,
+	-- index the foreign keys
+	INDEX(verseFavoriteProfileId),
+	INDEX(verseFavoriteVerseId),
+	-- create the foreign key relations to verse entity and profile entity
+	FOREIGN KEY(verseFavoriteVerseId) REFERENCES verse(verseId),
+	FOREIGN KEY(verseFavoriteProfileId) REFERENCES profile(profileId),
+	-- create a composite key with the two foreign, which will be known as a PRIMARY in this case
+	PRIMARY KEY(verseFavoriteProfileId, verseFavoriteVerseId)
+);
 
-)
