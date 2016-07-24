@@ -61,8 +61,15 @@ CREATE TABLE verseFavorite (
 -- create a lexicon entity table
 CREATE TABLE lexicon (
 	-- this is yet another primary key
-	lexiconID INT UNSIGNED AUTO_INCREMENT NOT NULL,
+	lexiconId INT UNSIGNED AUTO_INCREMENT NOT NULL,
 	-- giving a sufficient amount of space for lexicon content
 	-- inquire if there is a statement that will give unlimited characters.
-
+	lexiconEnglishPhrase VARCHAR(1000) NOT NULL,
+	-- leaving optional just in case it's one or the other for the translation
+	lexiconGreekPhrase VARCHAR(1000),
+	lexiconHebrewPhrase VARCHAR(1000),
+	-- need to make a unique for lexiconId
+	UNIQUE(lexiconId),
+	-- finally identifying as a primary key
+	PRIMARY KEY(lexiconId)
 );
