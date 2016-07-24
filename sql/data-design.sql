@@ -18,6 +18,7 @@ DROP TABLE IF EXISTS profile;
 CREATE TABLE profile (
 	profileId INT UNSIGNED AUTO_INCREMENT NOT NULL,
 	profileEmail VARCHAR(128) NOT NULL,
+	-- not null is excluded, so it's not required, this is optional
 	firstName VARCHAR (32),
 	lastName VARCHAR (32),
 	-- I need to make profileEmail unique so 2 people with the same email doesn't have a primary key.
@@ -34,7 +35,13 @@ CREATE TABLE verse (
 	verseContent VARCHAR (1000) NOT NULL,
 	-- I'm unsure if I'm suppose to make an index for verseContent here
 	-- so i'll just end it here and make the primary key and continue to make the weak entity below
+	-- DECIDED TO MAKE verseId A UNIQUE CHARACTER, no duplicate data
+	UNIQUE(verseId),
 	-- THIS CREATES THE PRIMARY KEY
 	PRIMARY KEY(verseId)
 );
 
+-- create verseFavorite weak entity (a m-to-n for profile and an m-to-m relationship with verse entity)
+CREATE TABLE verseFavorite (
+
+)
