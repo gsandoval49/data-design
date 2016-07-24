@@ -58,3 +58,7 @@ CREATE TABLE verseFavorite (
 	PRIMARY KEY(verseFavoriteProfileId, verseFavoriteVerseId)
 );
 
+-- create a lexicon entity table
+CREATE TABLE lexicon (
+
+);
