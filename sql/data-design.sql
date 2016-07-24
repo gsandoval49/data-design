@@ -31,7 +31,7 @@ CREATE TABLE profile (
 CREATE TABLE verse (
 	-- this is another primary key in the verse entity table
 	verseId INT UNSIGNED AUTO_INCREMENT NOT NULL,
-	-- content for the specific verses, gave a lot of characters for content,
+	-- content for the specific verses, gave a BIG limit for characters for content,
 	verseContent VARCHAR (1000) NOT NULL,
 	-- I'm unsure if I'm suppose to make an index for verseContent here
 	-- so i'll just end it here and make the primary key and continue to make the weak entity below
@@ -60,5 +60,9 @@ CREATE TABLE verseFavorite (
 
 -- create a lexicon entity table
 CREATE TABLE lexicon (
+	-- this is yet another primary key
+	lexiconID INT UNSIGNED AUTO_INCREMENT NOT NULL,
+	-- giving a sufficient amount of space for lexicon content
+	-- inquire if there is a statement that will give unlimited characters.
 
 );
