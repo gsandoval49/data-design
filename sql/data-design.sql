@@ -19,8 +19,8 @@ CREATE TABLE profile (
 	profileId INT UNSIGNED AUTO_INCREMENT NOT NULL,
 	profileEmail VARCHAR(128) NOT NULL,
 	-- not null is excluded, so it's not required, this is optional
-	firstName VARCHAR (32),
-	lastName VARCHAR (32),
+	profileFirstName VARCHAR (32),
+	profileLastName VARCHAR (32),
 	-- I need to make profileEmail unique so 2 people with the same email doesn't have a primary key.
 	UNIQUE (profileEmail),
 	-- this officiates the primary key for the entity
