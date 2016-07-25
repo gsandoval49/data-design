@@ -72,8 +72,70 @@ class Profile {
 	public function setProfileEmail($newProfileEmail) {
 		// verify that the email is valid
 		//check to see if there is a check for email specifically for validity.
+		$newProfileEmail = filter_var($newProfileEmail, FILTER_SANITIZE_EMAIL);
+		if($newProfileEmail === false) {
+			throw(new UnexpectedValueException("email is not a valid string"));
+		}
+
+		// store the email
+		$this->profileEmail = $newProfileEmail;
 	}
 
+	/**
+	 * accessor method for first name
+	 *
+	 * @return string value for the first name
+	 **/
+	public function getProfileFirstName() {
+		return($this->profileFirstName);
+	}
+
+	/**
+	 * mutator method for first name
+	 *
+	 * @param string $newProfileFirstName new value of first name
+	 * @throws UnexpectedValueException if $newProfileFirstName is not valid
+	 **/
+	public function setProfileFirstName($newProfileFirstName) {
+		// verify the first name is valid
+		$newProfileFirstName = filter_var($newProfileFirstName, FILTER_SANITIZE_STRING);
+		if($newProfileFirstName === false) {
+			throw(new UnexpectedValueException("first name is not a valid string"));
+		}
+
+		// store the first name
+		$this->profileFirstName = $newProfileFirstName;
+	}
+
+	/**
+	 * accessor method for last name
+	 *
+	 * @return string value of last name
+	 **/
+	/**
+	 * @return mixed
+	 * this auto populated when i hit the tab button. I'm leaving it there and inquiring later.
+	 */
+	public function getProfileLastName() {
+		return $this->profileLastName;
+	}
+
+	/**
+	 * mutator method for last name
+	 *
+	 * @param string $newProfileLastName new value of last name
+	 * @throws UnexpectedValueException if $newProfileLastName is not valid
+	 **/
+	public function setProfileLastName($newProfileLastName) {
+		// verify the last name is valid
+		$newProfileLastName = filter_var($newProfileLastName, FILTER_SANITIZE_STRING);
+		if($newProfileLastName === false) {
+			throw(new UnexpectedValueException("last name is not a valid string"));
+		}
+
+		// store the last name
+		$this->profileLastName = $newProfileLastName;
+	}
 }
 
 ?>
