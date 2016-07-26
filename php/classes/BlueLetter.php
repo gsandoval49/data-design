@@ -1,4 +1,9 @@
 <?php
+namespace Edu\Cnm\Gsandoval49\Data-Design;
+
+require_once ("autoload.php");
+
+
 /**
  * Profile for blue letter bible site
  *
@@ -9,22 +14,28 @@
  * finish class and the end.
  *
  * @author Giles Sandoval <gsandoval49@cnm.edu>
+ * @version 3.0.0
  **/
-class Profile {
+class Profile implements \JsonSerializable {
+	use ValidateDate;
 	/**
 	 * id for the Profile; this is a primary key.
+	 * @var int $profileId
 	 **/
 	private $profileId;
 	/**
 	 * email for the user of this profile.
+	 * @var string $profileEmail
 	 **/
 	private $profileEmail;
 	/**
 	 * first name of this person.
+	 * @var string $profileFirstName
 	 **/
 	private $profileFirstName;
 	/**
 	 * last name of this person.
+	 * @var string $profileLastName
 	 **/
 	private $profileLastName;
 
