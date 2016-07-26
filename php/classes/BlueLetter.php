@@ -1,5 +1,5 @@
 <?php
-namespace Edu\Cnm\Gsandoval49\Data-Design;
+namespace Edu\Cnm\Gsandoval49\DataDesign;
 
 require_once ("autoload.php");
 
@@ -17,7 +17,7 @@ require_once ("autoload.php");
  * @version 3.0.0
  **/
 class Profile implements \JsonSerializable {
-	use ValidateDate;
+	use ValidateDate; // DO I NEED THIS?
 	/**
 	 * id for the Profile; this is a primary key.
 	 * @var int $profileId
@@ -38,6 +38,25 @@ class Profile implements \JsonSerializable {
 	 * @var string $profileLastName
 	 **/
 	private $profileLastName;
+
+	/**
+	 * constructor for this Profile
+	 *
+	 * @param int|null $profileId id of this Profile or null if a new profile id
+	 * @param string $profileEmail containing the email of the Profile
+	 * @param string $profileFirstName containing first name
+	 * @param string $profileLastName contains last name
+	 * @throws \InvalidArgumentException if data type is not valid
+	 * @throws \RangeException if data values are out of bounds (e.g strings too long, negative intergers)
+	 * @throws \TypeError if data violates type hints
+	 * @throws \Exception if some other exception occurs
+	 **/
+	public function _construct(int $profileId = null, int $profileId, string $profileEmail, string $profileFirstName, string $profileLastname) {
+		try {
+			$this->setProfileId(newProfileId);
+			$this->
+		}
+	}
 
 	/**
 	 * accessor method for profile id
@@ -146,6 +165,17 @@ class Profile implements \JsonSerializable {
 
 		// store the last name
 		$this->profileLastName = $newProfileLastName;
+	}
+
+	/**
+	 * Specify data which should be serialized to JSON
+	 * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
+	 * @return mixed data which can be serialized by <b>json_encode</b>,
+	 * which is a value of any type other than a resource.
+	 * @since 5.4.0
+	 */
+	function jsonSerialize() {
+		// TODO: Implement jsonSerialize() method.
 	}
 }
 
