@@ -1,8 +1,5 @@
 <?php
-namespace Edu\Cnm\Gsandoval49\DataDesign;
-
-require_once ("autoload.php");
-
+/* according to Raul I have to create different files for each entity*/
 
 /**
  * Profile for blue letter bible site
