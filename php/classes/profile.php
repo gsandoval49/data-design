@@ -6,3 +6,6 @@
  *
  * @author Giles Sandoval <gsandoval49@cnm.edu>
  **/
+class Profile implements \JsonSerializable {
+
+}
