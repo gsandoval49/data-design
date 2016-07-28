@@ -1,7 +1,8 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: JarvisAreWeUp
- * Date: 7/27/2016
- * Time: 11:43 PM
- */
+ * Small section of Blue letter bible profile
+ *
+ * This section is considered to profile section for creating profileId, email, first and last name.
+ *
+ * @author Giles Sandoval <gsandoval49@cnm.edu>
+ **/
